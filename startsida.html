@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="describtion" content="Övningar med canvas i HTML">
+    <meta name="author" content="Stina TEINF21">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <title>HTML Canvas - Övningar</title>
+</head>
+<body>
+    
+    <div class="nav-bar">
+        <a class="active" href="startsida.html">Startsida</a>
+        <a class="upgft nr2" href="upgft2.html">Uppgift Nr.2</a>
+        <a class="upgft nr3" href="upgft3.html">Uppgift Nr.3</a>
+        <a class="upgft nr4" href="upgft4.html">Uppgift Nr.4</a>
+    </div>
+
+    <h1>Övningar med canvas i HTML</h1>
+
+    <h3>Startsidan</h3>
+
+    <canvas id="minCanvas" width="950" height="600" style="border:2px solid darkcyan;"></canvas>
+
+<script>
+        var canvas = document.getElementById("minCanvas");
+        var ctx = canvas.getContext("2d");
+
+        ctx.strokeStyle = "blue"; 
+        ctx.beginPath();
+        ctx.moveTo(canvas.width / 2, 0);
+        ctx.lineTo(canvas.width / 2, canvas.height);
+        ctx.stroke();
+
+        ctx.strokeStyle = "darkcyan"; 
+        ctx.arc(canvas.width / 4, canvas.height / 4, 50, 0, 2 * Math.PI);
+        ctx.stroke();
+
+        ctx.fillStyle = "lavender";
+        ctx.beginPath();
+        ctx.rect(0, canvas.height / 2, canvas.width / 2, canvas.height / 2);
+        ctx.fill();
+
+        ctx.fillStyle = "darkorchid";
+        ctx.font = '20px Calibri';
+        ctx.fillText("Stina", 20, 30);
+
+</script>
+
+
+
+
+</body>
+</html>

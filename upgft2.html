@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="describtion" content="Övningar med canvas i HTML">
+    <meta name="author" content="Stina TEINF21">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <title>HTML Canvas - Övningar</title>
+</head>
+<body>
+    
+    <div class="nav-bar">
+        <a class="active" href="startsida.html">Startsida</a>
+        <a class="upgft nr2" href="upgft2.html">Uppgift Nr.2</a>
+        <a class="upgft nr3" href="upgft3.html">Uppgift Nr.3</a>
+        <a class="upgft nr4" href="upgft4.html">Uppgift Nr.4</a>
+    </div>
+
+    <h1>Övningar med canvas i HTML</h1>
+
+    <h3>Rektangel funktion</h3>
+
+    <canvas id="nyCanvas" width="750" height="600" style="border: 2px solid darkcyan";></canvas>
+
+<script>
+
+    function ritaRektangel(ctx, x, y, width, height, color)
+    {
+        ctx.fillStyle = color;
+        ctx.fillRect(x, y, width, height);
+    }
+
+    window.onload = function()
+    {
+        var canvas = document.getElementById("nyCanvas");
+        var ctx = canvas.getContext("2d");
+
+        ritaRektangel(ctx, 50, 50, 300, 200, "powderblue");
+        ritaRektangel(ctx, 200, 100, 250, 150, "plum");
+        ritaRektangel(ctx, 350, 250, 450, 250, "mistyrose");
+    }
+
+
+
+</script>
+
+</body>
+</html>
